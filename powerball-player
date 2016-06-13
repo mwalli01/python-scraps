@@ -1,0 +1,17 @@
+import random
+
+numbers = [0, 0, 0, 0, 0, 0]
+lottoTicket = 0
+totalCost = 0
+while numbers != [8, 27, 34, 4, 19, 10]:
+    numbers = [random.randint(1,69), random.randint(1,69), random.randint(1,69),
+               random.randint(1,69), random.randint(1,69),
+               random.randint(1,25)]
+    lottoTicket += 1
+    totalCost += 2
+
+
+print('You\'ve won! You bought ' +
+      str(lottoTicket) + ' tickets with a total cost of ' +
+      str(totalCost) + ' USD!')
+
