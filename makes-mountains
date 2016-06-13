@@ -1,0 +1,29 @@
+import random
+import time
+lump = [0]
+def humps():
+    randomHeight = random.randint(4, 20) #height of mountains
+    randomLength = random.randint(2, 10) #length of plateaus
+    global lump
+    step = .02                          #speed of generation
+
+    while len(lump) < randomHeight:      #this makes mountains go up
+        lump += [len(lump)]
+        print(lump)
+        time.sleep(step)
+
+    while len(lump) == randomHeight:     #this makes plateaus
+        for i in range(1, randomLength):
+            print(lump)
+            time.sleep(step)
+        else:
+            humps()
+
+    else:
+        while len(lump) > randomLength:            #this makes mountains go down
+            del lump[-1]
+            print(lump)
+            time.sleep(step)
+    humps()
+humps()
+        
